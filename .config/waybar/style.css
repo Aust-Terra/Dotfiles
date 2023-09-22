@@ -1,0 +1,107 @@
+@import "./rose-pine-moon.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: @text;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: @highlightMed;
+    margin-right: 5px;
+}
+
+tooltip {
+    background: @base;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @overlay;
+}
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+#workspaces button.focused {
+    color: @subtle;
+    background: @love;
+
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: @base;
+    background: @pine;
+    border-radius: 10px;
+}
+
+#workspaces button.active {
+    background: @highlightMed;
+    color: @text;
+    border-radius: 10px;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#workspaces,
+#tray {
+  background: @base;
+  padding: 0px 10px;
+  border: 1px solid @overlay;
+}
+
+#clock {
+    color: @gold;
+}
+
+#battery {
+    color: @foam;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @love;
+}
+
+#cpu {
+    color: @rose;
+}
+
+#memory {
+    color: @foam;
+}
+
+#backlight {
+    color: @text;
+}
+
+#network {
+    color: @love;
+}
+
+#pulseaudio {
+    color: @iris;
+}
+
+#pulseaudio.muted {
+    background-color: @love;
+}
