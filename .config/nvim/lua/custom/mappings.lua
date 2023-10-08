@@ -6,6 +6,14 @@ M.dap = {
       "<cmd> DapToggleBreakpoint <CR>",
       "Toggle breakpoint"
     },
+    ["<leader>dx"] = {
+      "<cmd> DapTerminate <CR>",
+      "Terminate debugging"
+    },
+    ["<leader>do"] = {
+      "<cmd> DapStepOver <CR>",
+      "Step over"
+    },
     ["<leader>dus"] = {
       function ()
         local widgets = require('dap.ui.widgets');
@@ -18,13 +26,12 @@ M.dap = {
 }
 
 M.crates = {
-  plugin = true,
   n = {
     ["<leader>rcu"] = {
       function ()
         require('crates').upgrade_all_crates()
       end,
-      "update crates"
+      "Update crates"
     }
   }
 }
